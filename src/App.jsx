@@ -50,127 +50,127 @@ function App() {
         <div className="flex gap-1  justify-between">
           <p className="font-bold font-serif">Cap Shape : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="CapShape" id="CapShape">
-            <option selected value="b">Bell</option>
-            <option value="c">Conical</option>
-            <option value="x">Convex</option>
-            <option value="f">Flat</option>
-            <option value="k">Knobbed</option>
-            <option value="s">Sunken</option>
+            <option selected value="b">Bell(b)</option>
+            <option value="c">Conical(c)</option>
+            <option value="x">Convex(x)</option>
+            <option value="f">Flat(f)</option>
+            <option value="k">Knobbed(k)</option>
+            <option value="s">Sunken(s)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Cap Surface : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="CapSurface" id="CapSurface">
-            <option selected value="f">Fibrous</option>
-            <option value="g">Grooves</option>
-            <option value="y">Scaly</option>
-            <option value="s">Smooth</option>
+            <option selected value="f">Fibrous(f)</option>
+            <option value="g">Grooves(f)</option>
+            <option value="y">Scaly(y)</option>
+            <option value="s">Smooth(s)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Cap Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="CapColor" id="CapColor">
-            <option selected value="n">Brown</option>
-            <option value="b">Buff</option>
-            <option value="c">Cinnamon</option>
-            <option value="g">Gray</option>
-            <option value="r">Green</option>
-            <option value="p">Pink</option>
-            <option value="u">Purple</option>
-            <option value="e">Red</option>
-            <option value="w">White</option>
-            <option value="y">Yellow</option>
+            <option selected value="n">Brown(n)</option>
+            <option value="b">Buff(b)</option>
+            <option value="c">Cinnamon(c)</option>
+            <option value="g">Gray(g)</option>
+            <option value="r">Green(r)</option>
+            <option value="p">Pink(p)</option>
+            <option value="u">Purple(u)</option>
+            <option value="e">Red(e)</option>
+            <option value="w">White(w)</option>
+            <option value="y">Yellow(y)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Bruises : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Bruises" id="Bruises">
-            <option selected value="t">Bruises</option>
-            <option value="f">No</option>
+            <option selected value="t">Bruises(t)</option>
+            <option value="f">No(f)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Odor : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Odor" id="Odor">
-            <option selected value="a">Almond</option>
-            <option value="l">Anise</option>
-            <option value="c">Creosote</option>
-            <option value="y">Fishy</option>
-            <option value="f">Foul</option>
-            <option value="m">Musty</option>
-            <option value="n">None</option>
-            <option value="p">Pungent</option>
-            <option value="s">Spicy</option>
+            <option selected value="a">Almond(a)</option>
+            <option value="l">Anise(l)</option>
+            <option value="c">Creosote(c)</option>
+            <option value="y">Fishy(y)</option>
+            <option value="f">Foul(f)</option>
+            <option value="m">Musty(m)</option>
+            <option value="n">None(n)</option>
+            <option value="p">Pungent(p)</option>
+            <option value="s">Spicy(s)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Gill Attachment : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillAttachment" id="GillAttachment">
-            <option selected value="a">Attached</option>
-            <option value="d">Descending</option>
-            <option value="f">Free</option>
-            <option value="n">Notched</option>
+            <option selected value="a">Attached(a)</option>
+            <option value="d">Descending(d)</option>
+            <option value="f">Free(f)</option>
+            <option value="n">Notched(n)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Gill Spacing : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillSpacing" id="GillSpacing">
-            <option selected value="c">Close</option>
-            <option value="w">Crowded</option>
-            <option value="d">Distant</option>
+            <option selected value="c">Close(c)</option>
+            <option value="w">Crowded(w)</option>
+            <option value="d">Distant(d)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Gill Size : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillSize" id="GillSize">
-            <option selected value="b">Broad</option>
-            <option value="n">Narrow</option>
+            <option selected value="b">Broad(b)</option>
+            <option value="n">Narrow(n)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Gill Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillColor" id="GillColor">
-            <option selected value="k">Black</option>
-            <option value="n">Brown</option>
-            <option value="b">Buff</option>
-            <option value="h">Chocolate</option>
-            <option value="g">Gray</option>
-            <option value="r">Green</option>
-            <option value="o">Orange</option>
-            <option value="p">Pink</option>
-            <option value="u">Purple</option>
-            <option value="e">Red</option>
-            <option value="w">White</option>
-            <option value="y">Yellow</option>
+            <option selected value="k">Black(k)</option>
+            <option value="n">Brown(n)</option>
+            <option value="b">Buff(b)</option>
+            <option value="h">Chocolate(h)</option>
+            <option value="g">Gray(g)</option>
+            <option value="r">Green(r)</option>
+            <option value="o">Orange(o)</option>
+            <option value="p">Pink(p)</option>
+            <option value="u">Purple(u)</option>
+            <option value="e">Red(e)</option>
+            <option value="w">White(w)</option>
+            <option value="y">Yellow(y)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Stalk Shape : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkShape" id="StalkShape">
-            <option selected value="e">Enlarging</option>
-            <option value="t">Tapering</option>
+            <option selected value="e">Enlarging(e)</option>
+            <option value="t">Tapering(t)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Stalk Root : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkRoot" id="StalkRoot">
-            <option selected value="b">Bulbous</option>
-            <option value="c">Club</option>
-            <option value="u">Cup</option>
-            <option value="e">Equal</option>
-            <option value="z">Rhizomorphs</option>
-            <option value="r">Rooted</option>
-            <option value="?">Missing</option>
+            <option selected value="b">Bulbous(b)</option>
+            <option value="c">Club(c)</option>
+            <option value="u">Cup(u)</option>
+            <option value="e">Equal(e)</option>
+            <option value="z">Rhizomorphs(z)</option>
+            <option value="r">Rooted(r)</option>
+            <option value="?">Missing(?)</option>
           </select>
         </div>
       </div>
@@ -179,131 +179,131 @@ function App() {
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Stalk Surface Above Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkSurfaceAboveRing" id="StalkSurfaceAboveRing">
-            <option selected value="f">Fibrous</option>
-            <option value="y">Scaly</option>
-            <option value="k">Silky</option>
-            <option value="s">Smooth</option>
+            <option selected value="f">Fibrous(f)</option>
+            <option value="y">Scaly(y)</option>
+            <option value="k">Silky(k)</option>
+            <option value="s">Smooth(s)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Stalk Surface Below Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkSurfaceBelowRing" id="StalkSurfaceBelowRing">
-            <option  selected value="f">Fibrous</option>
-            <option value="y">Scaly</option>
-            <option value="k">Silky</option>
-            <option value="s">Smooth</option>
+            <option  selected value="f">Fibrous(f)</option>
+            <option value="y">Scaly(y)</option>
+            <option value="k">Silky(k)</option>
+            <option value="s">Smooth(s)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Stalk Color Above Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkColorAboveRing" id="StalkColorAboveRing">
-            <option selected value="n">Brown</option>
-            <option value="b">Buff</option>
-            <option value="c">Cinnamon</option>
-            <option value="g">Gray</option>
-            <option value="o">Orange</option>
-            <option value="p">Pink</option>
-            <option value="e">Eed</option>
-            <option value="w">White</option>
-            <option value="y">Yellow</option>
+            <option selected value="n">Brown(n)</option>
+            <option value="b">Buff(b)</option>
+            <option value="c">Cinnamon(c)</option>
+            <option value="g">Gray(g)</option>
+            <option value="o">Orange(o)</option>
+            <option value="p">Pink(p)</option>
+            <option value="e">Red(e)</option>
+            <option value="w">White(w)</option>
+            <option value="y">Yellow(y)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Stalk Color Below Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkColorBelowRing" id="StalkColorBelowRing">
-            <option selected value="n">Brown</option>
-            <option value="b">Buff</option>
-            <option value="c">Cinnamon</option>
-            <option value="g">Gray</option>
-            <option value="o">Orange</option>
-            <option value="p">Pink</option>
-            <option value="e">Eed</option>
-            <option value="w">White</option>
-            <option value="y">Yellow</option>
+            <option selected value="n">Brown(n)</option>
+            <option value="b">Buff(b)</option>
+            <option value="c">Cinnamon(c)</option>
+            <option value="g">Gray(g)</option>
+            <option value="o">Orange(o)</option>
+            <option value="p">Pink(p)</option>
+            <option value="e">Red(e)</option>
+            <option value="w">White(w)</option>
+            <option value="y">Yellow(y)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Veil Type : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="VeilType" id="VeilType">
-            <option selected value="p">Partial</option>
-            <option value="u">Universal</option>
+            <option selected value="p">Partial(p)</option>
+            <option value="u">Universal(u)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Veil Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="VeilColor" id="VeilColor">
-            <option selected value="n">Brown</option>
-            <option value="o">Orange</option>
-            <option value="w">White</option>
-            <option value="y">Yellow</option>
+            <option selected value="n">Brown(n)</option>
+            <option value="o">Orange(o)</option>
+            <option value="w">White(w)</option>
+            <option value="y">Yellow(y)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Ring Number : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="RingNumber" id="RingNumber">
-            <option selected value="n">none</option>
-            <option value="o">one</option>
-            <option value="t">two</option>
+            <option selected value="n">none(n)</option>
+            <option value="o">one(o)</option>
+            <option value="t">two(t)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Ring Type : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="RingType" id="RingType">
-            <option selected value="c">Cobwebby</option>
-            <option value="e">Evanescent</option>
-            <option value="f">Flaring</option>
-            <option value="l">Large</option>
-            <option value="n">None</option>
-            <option value="p">Pendant</option>
-            <option value="s">Sheathing</option>
-            <option value="z">Zone</option>
+            <option selected value="c">Cobwebby(c)</option>
+            <option value="e">Evanescent(e)</option>
+            <option value="f">Flaring(f)</option>
+            <option value="l">Large(l)</option>
+            <option value="n">None(n)</option>
+            <option value="p">Pendant(p)</option>
+            <option value="s">Sheathing(s)</option>
+            <option value="z">Zone(z)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Spore Print Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="SporePrintColor" id="SporePrintColor">
-            <option selected value="k">Black</option>
-            <option value="n">Brown</option>
-            <option value="b">Buff</option>
-            <option value="h">Chocolate</option>
-            <option value="r">Green</option>
-            <option value="o">Orange</option>
-            <option value="u">Purple</option>
-            <option value="w">White</option>
-            <option value="y">Yellow</option>
+            <option selected value="k">Black(k)</option>
+            <option value="n">Brown(n)</option>
+            <option value="b">Buff(b)</option>
+            <option value="h">Chocolate(h)</option>
+            <option value="r">Green(g)</option>
+            <option value="o">Orange(o)</option>
+            <option value="u">Purple(u)</option>
+            <option value="w">White(w)</option>
+            <option value="y">Yellow(y)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Population : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Population" id="Population">
-            <option selected value="a">Abundant</option>
-            <option value="c">Clustered</option>
-            <option value="n">Numerous</option>
-            <option value="s">Scattered</option>
-            <option value="v">Several</option>
-            <option value="y">Solitary</option>
+            <option selected value="a">Abundant(a)</option>
+            <option value="c">Clustered(c)</option>
+            <option value="n">Numerous(c)</option>
+            <option value="s">Scattered(s)</option>
+            <option value="v">Several(v)</option>
+            <option value="y">Solitary(y)</option>
           </select>
         </div>
 
         <div className="flex gap-1 justify-between">
           <p className="font-bold font-sans">Habitat : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Habitat" id="Habitat">
-            <option selected value="g">Grasses</option>
-            <option value="l">Leaves</option>
-            <option value="m">Meadows</option>
-            <option value="p">Paths</option>
-            <option value="u">Urban</option>
-            <option value="w">Waste</option>
-            <option value="d">Woods</option>
+            <option selected value="g">Grasses(g)</option>
+            <option value="l">Leaves(l)</option>
+            <option value="m">Meadows(m)</option>
+            <option value="p">Paths(p)</option>
+            <option value="u">Urban(u)</option>
+            <option value="w">Waste(w)</option>
+            <option value="d">Woods(d)</option>
           </select>
         </div>
       </div>
