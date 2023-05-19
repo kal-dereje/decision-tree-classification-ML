@@ -32,15 +32,25 @@ const mapData = (row) => {
 };
 
 async function loadData() {
+  // Specify the URL of the CSV file
   const csvUrl ="data/mushrooms.csv";
+
+  // Load the CSV dataset using tf.data.csv
   const csvDataset = tf.data.csv(csvUrl, {
+    // Specify the column configuration, marking the "class" column as the label
     columnConfigs: { class: { isLabel: true } },
   });
+
+  // Convert the CSV dataset to an array of objects
   const rawData = await csvDataset.toArray();
 
+  // Map the raw data to the desired format using the mapData function
   const data = rawData.map(mapData);
+
+  // Return the processed data
   return data;
 }
+
 
 class DecisionTree {
   constructor() {
@@ -54,7 +64,7 @@ class DecisionTree {
   predict(X) {
     // Initialize an empty array to store the predicted class labels.
     const yPred = [];
-
+    
     // Loop through all the input feature vectors.
     for (let i = 0; i < X.length; i++) {
       
@@ -98,9 +108,10 @@ class DecisionTree {
 
     // Get the number of samples and features in the data
     const nSamples = y.length;
+
     const nFeatures = X[0].length;
-    // Create an array of all feature indices
-    const features = new Array(nFeatures).fill().map((_, i) => i);
+    // // Create an array of all feature indices
+    // const features = new Array(nFeatures).fill().map((_, i) => i);
 
     // Initialize variables to track the best feature and gain seen so far
     let bestGain = -Infinity;
@@ -185,15 +196,13 @@ class Node {
   }
 }
 
-export async function main(yTest) {
+export async function main(xTest) {
       // Create instance of DecisionTree
       const tree = new DecisionTree();
 
       let Xtrain= [];
       let Ytrain = [];
 
-      let Xtest = [];
-     
       
 
       await loadData()
@@ -213,10 +222,11 @@ export async function main(yTest) {
       tree.fit(Xtrain , Ytrain);
 
     // get predictions for each sample
-      const yPred = tree.predict([ yTest]);
+      const yPred = tree.predict([xTest]);
      
       
-  alert(yPred == 'e'?"the mushroom is ediable":"the mushroom is poisonous")
+  alert(yPred == 'e'?"the mushroom is ediable":"the mushroom is poisonous");
+
 }
 
 

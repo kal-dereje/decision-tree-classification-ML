@@ -1,11 +1,12 @@
 
+import CSVReader from './Csv.jsx';
 import {main} from './tree.js';
-
+import images from './assets/mushrooms.jpg'
 
 function App() {
 
   function handelClick(){
-    let capShape = getValue( document.getElementById("CapShape"));
+    let capShape = getValue(document.getElementById("CapShape"));
     let capSurface = getValue(document.getElementById("CapSurface"));
     let capColor = getValue(document.getElementById("CapColor"));
     let bruises = getValue(document.getElementById("Bruises"));
@@ -43,12 +44,13 @@ function App() {
   }
   return (
 
-    <div className="flex flex-col gap-5 items-center pt-28 pb-28">
-      <h1 className="font-bold font-serif text-2xl">Mushroom Classification</h1>
-    <div className="w-full h-screen gap-32 flex justify-center items-center">
-      <div className="flex flex-col w-[25%] gap-1 ">
+    <div className="flex flex-col gap-5 items-center pt-10 pb-[45px] h-full bg-black bg-opacity-40   ">
+      <img src={images} alt="" className='absolute top-0 left-0 -z-10 object-cover' />
+      <h1 className="font-bold font-serif pb-10 text-4xl text-white">Mushroom Classification</h1>
+    <div className="w-full h-screen gap-24 flex justify-center items-center">
+      <div className="flex flex-col w-[40%] gap-1 ">
         <div className="flex gap-1  justify-between">
-          <p className="font-bold font-serif">Cap Shape : </p>
+          <p className="font-bold font-serif text-white">Cap Shape : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="CapShape" id="CapShape">
             <option selected value="b">Bell(b)</option>
             <option value="c">Conical(c)</option>
@@ -60,7 +62,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Cap Surface : </p>
+          <p className="font-bold font-sans text-white">Cap Surface : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="CapSurface" id="CapSurface">
             <option selected value="f">Fibrous(f)</option>
             <option value="g">Grooves(f)</option>
@@ -70,7 +72,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Cap Color : </p>
+          <p className="font-bold font-sans text-white">Cap Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="CapColor" id="CapColor">
             <option selected value="n">Brown(n)</option>
             <option value="b">Buff(b)</option>
@@ -86,7 +88,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Bruises : </p>
+          <p className="font-bold font-sans text-white">Bruises : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Bruises" id="Bruises">
             <option selected value="t">Bruises(t)</option>
             <option value="f">No(f)</option>
@@ -94,7 +96,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Odor : </p>
+          <p className="font-bold font-sans text-white">Odor : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Odor" id="Odor">
             <option selected value="a">Almond(a)</option>
             <option value="l">Anise(l)</option>
@@ -109,7 +111,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Gill Attachment : </p>
+          <p className="font-bold font-sans text-white">Gill Attachment : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillAttachment" id="GillAttachment">
             <option selected value="a">Attached(a)</option>
             <option value="d">Descending(d)</option>
@@ -119,7 +121,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Gill Spacing : </p>
+          <p className="font-bold font-sans text-white">Gill Spacing : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillSpacing" id="GillSpacing">
             <option selected value="c">Close(c)</option>
             <option value="w">Crowded(w)</option>
@@ -128,7 +130,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Gill Size : </p>
+          <p className="font-bold font-sans text-white">Gill Size : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillSize" id="GillSize">
             <option selected value="b">Broad(b)</option>
             <option value="n">Narrow(n)</option>
@@ -136,7 +138,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Gill Color : </p>
+          <p className="font-bold font-sans text-white">Gill Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="GillColor" id="GillColor">
             <option selected value="k">Black(k)</option>
             <option value="n">Brown(n)</option>
@@ -154,7 +156,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Stalk Shape : </p>
+          <p className="font-bold font-sans text-white">Stalk Shape : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkShape" id="StalkShape">
             <option selected value="e">Enlarging(e)</option>
             <option value="t">Tapering(t)</option>
@@ -162,7 +164,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Stalk Root : </p>
+          <p className="font-bold font-sans text-white">Stalk Root : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkRoot" id="StalkRoot">
             <option selected value="b">Bulbous(b)</option>
             <option value="c">Club(c)</option>
@@ -175,9 +177,9 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col w-[30%] gap-1">
+      <div className="flex flex-col w-[40%] gap-1">
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Stalk Surface Above Ring : </p>
+          <p className="font-bold font-sans text-white">Stalk Surface Above Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkSurfaceAboveRing" id="StalkSurfaceAboveRing">
             <option selected value="f">Fibrous(f)</option>
             <option value="y">Scaly(y)</option>
@@ -187,7 +189,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Stalk Surface Below Ring : </p>
+          <p className="font-bold font-sans text-white">Stalk Surface Below Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkSurfaceBelowRing" id="StalkSurfaceBelowRing">
             <option  selected value="f">Fibrous(f)</option>
             <option value="y">Scaly(y)</option>
@@ -197,7 +199,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Stalk Color Above Ring : </p>
+          <p className="font-bold font-sans text-white">Stalk Color Above Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkColorAboveRing" id="StalkColorAboveRing">
             <option selected value="n">Brown(n)</option>
             <option value="b">Buff(b)</option>
@@ -212,7 +214,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Stalk Color Below Ring : </p>
+          <p className="font-bold font-sans text-white">Stalk Color Below Ring : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="StalkColorBelowRing" id="StalkColorBelowRing">
             <option selected value="n">Brown(n)</option>
             <option value="b">Buff(b)</option>
@@ -227,7 +229,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Veil Type : </p>
+          <p className="font-bold font-sans text-white">Veil Type : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="VeilType" id="VeilType">
             <option selected value="p">Partial(p)</option>
             <option value="u">Universal(u)</option>
@@ -235,7 +237,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Veil Color : </p>
+          <p className="font-bold font-sans text-white">Veil Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="VeilColor" id="VeilColor">
             <option selected value="n">Brown(n)</option>
             <option value="o">Orange(o)</option>
@@ -245,7 +247,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Ring Number : </p>
+          <p className="font-bold font-sans text-white">Ring Number : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="RingNumber" id="RingNumber">
             <option selected value="n">none(n)</option>
             <option value="o">one(o)</option>
@@ -254,7 +256,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Ring Type : </p>
+          <p className="font-bold font-sans text-white">Ring Type : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="RingType" id="RingType">
             <option selected value="c">Cobwebby(c)</option>
             <option value="e">Evanescent(e)</option>
@@ -268,7 +270,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Spore Print Color : </p>
+          <p className="font-bold font-sans text-white">Spore Print Color : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="SporePrintColor" id="SporePrintColor">
             <option selected value="k">Black(k)</option>
             <option value="n">Brown(n)</option>
@@ -283,7 +285,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Population : </p>
+          <p className="font-bold font-sans text-white">Population : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Population" id="Population">
             <option selected value="a">Abundant(a)</option>
             <option value="c">Clustered(c)</option>
@@ -295,7 +297,7 @@ function App() {
         </div>
 
         <div className="flex gap-1 justify-between">
-          <p className="font-bold font-sans">Habitat : </p>
+          <p className="font-bold font-sans text-white">Habitat : </p>
           <select className="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Habitat" id="Habitat">
             <option selected value="g">Grasses(g)</option>
             <option value="l">Leaves(l)</option>
@@ -311,6 +313,8 @@ function App() {
 
     <button onClick={handelClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pridict</button>
 
+
+  {/* <CSVReader /> */}
   </div>
   );
 }
