@@ -108,8 +108,8 @@ class DecisionTree {
 
     // Get the number of samples and features in the data
     const nSamples = y.length;
-
     const nFeatures = X[0].length;
+
     // // Create an array of all feature indices
     // const features = new Array(nFeatures).fill().map((_, i) => i);
 
@@ -225,7 +225,7 @@ export async function main(xTest) {
       const yPred = tree.predict([xTest]);
      
       
-  alert(yPred == 'e'?"the mushroom is ediable":"the mushroom is poisonous");
+  return yPred == 'e';
 
 }
 

@@ -9,8 +9,9 @@ function CSVReader() {
 
     reader.onload = event => {
       const contents = event.target.result;
-      
-      setCSVData(contents);
+      const rows = contents.split('\n');
+    
+      setCSVData(rows);
     };
 
     reader.readAsText(file);
@@ -19,8 +20,8 @@ function CSVReader() {
   return (
     <div>
       <input type="file" accept=".csv" onChange={handleFileUpload} />
-      {console.log(csvData)}
-      {csvData && <pre>{csvData}</pre>}
+      
+      {csvData && <pre>{csvData[1]}</pre>}
     </div>
   );
 }

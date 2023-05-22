@@ -1,11 +1,12 @@
 
-import CSVReader from './Csv.jsx';
+import React, { useState } from 'react';
+
 import {main} from './tree.js';
-import images from './assets/mushrooms.jpg'
+
 
 function App() {
 
-  function handelClick(){
+  async function handelClick(){
     let capShape = getValue(document.getElementById("CapShape"));
     let capSurface = getValue(document.getElementById("CapSurface"));
     let capColor = getValue(document.getElementById("CapColor"));
@@ -30,13 +31,32 @@ function App() {
     let habitat = getValue(document.getElementById("Habitat"));
     
   
-     main([capShape,capSurface , capColor , bruises , odor, gillAttachment, gillSpacing,gillSize, gillColor,stalkShape, stalkRoot, stalkSurfaceAboveRing,stalkSurfaceBelowRing,
-    stalkColorAboveRing, stalkColorBelowRing, veilType, veilColor, ringNumber, ringType, sporePrintColor,population,habitat]).then(data=>{
-      
-    }).catch(err=>alert(err))
+     try {
+      const data = await main([capShape, capSurface, capColor, bruises, odor, gillAttachment, gillSpacing, gillSize, gillColor, stalkShape, stalkRoot, stalkSurfaceAboveRing, stalkSurfaceBelowRing,
+        stalkColorAboveRing, stalkColorBelowRing, veilType, veilColor, ringNumber, ringType, sporePrintColor, population, habitat]);
+  ;
+        return data
+      } catch (err) {
+      return alert(err);
+    }
    
    
   }
+
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState("");
+  const openModal = async() => {
+    const perdiction  = await handelClick();
+    const output = perdiction ? "The mushroom is Edible": "The mushroom is poisonous";
+    setData( output);
+  
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
 
   function getValue(doc){
@@ -44,9 +64,9 @@ function App() {
   }
   return (
 
-    <div className="flex flex-col gap-5 items-center pt-10 pb-[45px] h-full bg-black bg-opacity-40   ">
-      <img src={images} alt="" className='absolute top-0 left-0 -z-10 object-cover' />
-      <h1 className="font-bold font-serif pb-10 text-4xl text-white">Mushroom Classification</h1>
+    <div className=" h-full  bg-[url('/img/mushrooms.jpg')] bg-cover   ">
+ <div className="flex flex-col  items-center h-full  bg-black bg-opacity-40 ">
+      <h1 className="font-bold font-serif pt-10 text-4xl text-white text-center pl-20 pr-20">Interactive Mushroom Classification: Explore the Fungal Kingdom</h1>
     <div className="w-full h-screen gap-24 flex justify-center items-center">
       <div className="flex flex-col w-[40%] gap-1 ">
         <div className="flex gap-1  justify-between">
@@ -311,12 +331,86 @@ function App() {
       </div>
     </div>
 
-    <button onClick={handelClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pridict</button>
 
+    <div className="flex items-center justify-center">
+      <button
+        className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+        onClick={openModal}
+      >
+        Predict
+      </button>
 
-  {/* <CSVReader /> */}
+      {isOpen && (
+        <div className="fixed inset-0 z-10 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black opacity-75"></div>
+
+          <div className="relative z-10 bg-black p-6 rounded shadow-lg">
+            <h2 className="text-xl font-semibold  text-white mb-4">Mushroom Predictor: Unveiling Fungal Classification</h2>
+            <p className="mb-4 text-center text-3xl text-green-500 font-bold">{data}</p>
+
+            <div className="flex justify-end">
+              <button
+                className="px-4 py-2 text-white bg-red-600 rounded hover:bg-red-800"
+                onClick={closeModal} 
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+
+    
+  </div>
   </div>
   );
 }
 
 export default App;
+
+
+
+function Modal(onClick) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState("");
+  const openModal = () => {
+   console.log(onclick);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="flex items-center justify-center">
+      <button
+        className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+        onClick={openModal}
+      >
+        Predict
+      </button>
+
+      {isOpen && (
+        <div className="fixed inset-0 z-10 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black opacity-75"></div>
+
+          <div className="relative z-10 bg-white p-6 rounded shadow-lg">
+            <h2 className="text-xl font-semibold mb-4">Unveiling the Secrets of Fungal Classification</h2>
+            <p className="mb-4">{data}</p>
+
+            <div className="flex justify-end">
+              <button
+                className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                onClick={closeModal}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
